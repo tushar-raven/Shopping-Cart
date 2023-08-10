@@ -14,23 +14,27 @@ const ShopButton = () => {
 };
 
 const Checkout = () => {
-  return <button>Checkout</button>;
+  return <button className={style.checkoutButton}>Checkout</button>;
 };
 
 const Close = ({ handleCart }) => {
-  return <button onClick={handleCart}>Close</button>;
+  return (
+    <button className={style.closeButton} onClick={handleCart}>
+      Close
+    </button>
+  );
 };
 
 const Filter = () => {
   return <button>Category</button>;
 };
 
-const AddButton = () => {
-  return <button>+</button>;
+const AddButton = ({ increaseItem }) => {
+  return <button onClick={increaseItem}>+</button>;
 };
 
-const RemoveButton = () => {
-  return <button>-</button>;
+const RemoveButton = ({ decreaseItem }) => {
+  return <button onClick={decreaseItem}>-</button>;
 };
 
 export {
@@ -46,6 +50,15 @@ export {
 Close.propTypes = {
   handleCart: PropTypes.any,
 };
+
 AddToCart.propTypes = {
   addItem: PropTypes.any,
+};
+
+AddButton.propTypes = {
+  increaseItem: PropTypes.func.isRequired,
+};
+
+RemoveButton.propTypes = {
+  decreaseItem: PropTypes.func.isRequired,
 };

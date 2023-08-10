@@ -18,7 +18,7 @@ const Card = ({ products, addItem }) => {
       </div>
       <div className={style.details}>
         <div className={style.name}>{products.title}</div>
-        <div className={style.price}>Rs. {Math.round(products.price * 80)}</div>
+        <div className={style.price}>Rs.{Math.round(products.price * 80)}</div>
         <AddToCart addItem={addItem} />
       </div>
     </div>

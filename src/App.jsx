@@ -53,17 +53,26 @@ const App = () => {
     }
   };
 
+  // useEffect(() => {
+  //   console.log(cartArray);
+  // }, [cartArray]);
+
   const increaseItem = (i) => {
-    setCartArray((prevClicked) => {
-      const items = [...prevClicked];
-      items[i]["number"] += 1;
-      setCartArray(items);
-    });
+    const updatedCartArray = [...cartArray];
+    updatedCartArray[i].number += 1;
+    setCartArray(updatedCartArray);
   };
 
-  useEffect(() => {
-    console.log(cartArray);
-  }, [cartArray]);
+  const decreaseItem = (i) => {
+    const updatedCartArray = [...cartArray];
+    updatedCartArray[i].number -= 1;
+
+    if (updatedCartArray[i].number === 0) {
+      updatedCartArray.splice(i, 1);
+    }
+
+    setCartArray(updatedCartArray);
+  };
 
   return (
     <BrowserRouter>
@@ -71,7 +80,9 @@ const App = () => {
         <Cart
           showCart={showCart}
           handleCart={handleCart}
+          cartArray={cartArray}
           increaseItem={increaseItem}
+          decreaseItem={decreaseItem}
         />
         <Header handleCart={handleCart} />
         <div className={style.main}>
