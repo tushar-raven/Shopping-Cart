@@ -1,8 +1,7 @@
-# React + Vite
+FakeStore
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It's a Shopping web app created with React and CSS.
 
-Currently, two official plugins are available:
+In this project, I made 3 pages that I rendered on client-side using react-router, used Fakestore API for the products, and did prop-drilling on multiple levels.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Live Demo](https://raven-fakestore.netlify.app/)👈
