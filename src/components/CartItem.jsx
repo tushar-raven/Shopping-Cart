@@ -35,9 +35,9 @@ const CartItem = ({ item, increaseItem, id, decreaseItem }) => {
 
 CartItem.propTypes = {
   item: PropTypes.any,
-  increaseItem: PropTypes.any,
-  id: PropTypes.any,
-  decreaseItem: PropTypes.any,
+  increaseItem: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
+  decreaseItem: PropTypes.func.isRequired,
 };
 
 export default CartItem;

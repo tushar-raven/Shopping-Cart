@@ -51,7 +51,7 @@ const Cart = ({
 Cart.propTypes = {
   showCart: PropTypes.bool.isRequired,
   handleCart: PropTypes.func.isRequired,
-  cartArray: PropTypes.any,
+  cartArray: PropTypes.array.isRequired,
   increaseItem: PropTypes.func.isRequired,
   decreaseItem: PropTypes.func.isRequired,
 };

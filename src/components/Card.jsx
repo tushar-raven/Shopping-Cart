@@ -26,7 +26,7 @@ const Card = ({ products, addItem }) => {
 };
 
 Card.propTypes = {
-  products: PropTypes.any,
+  products: PropTypes.array.isRequired,
   addItem: PropTypes.func.isRequired,
 };
 

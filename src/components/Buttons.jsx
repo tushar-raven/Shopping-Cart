@@ -48,11 +48,11 @@ export {
 };
 
 Close.propTypes = {
-  handleCart: PropTypes.any,
+  handleCart: PropTypes.func.isRequired,
 };
 
 AddToCart.propTypes = {
-  addItem: PropTypes.any,
+  addItem: PropTypes.func.isRequired,
 };
 
 AddButton.propTypes = {
